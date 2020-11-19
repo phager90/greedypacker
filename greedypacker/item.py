@@ -7,19 +7,17 @@ class Item:
     """
     def __init__(self, width, height,
                  CornerPoint: tuple = (0, 0),
-                 rotation: bool = True) -> None:
+                 id=0) -> None:
         self.width = width
         self.height = height
         self.x = CornerPoint[0]
         self.y = CornerPoint[1]
         self.area = self.width * self.height
         self.rotated = False
-        self.id = 0
-
+        self.id = id
 
     def __repr__(self):
         return 'Item(width=%r, height=%r, x=%r, y=%r)' % (self.width, self.height, self.x, self.y)
-
 
     def rotate(self) -> None:
         self.width, self.height = self.height, self.width

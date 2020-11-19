@@ -189,4 +189,7 @@ class BinManager:
         Loop over all items and attempt insertion
         """
         for item in self.items:
-            self.bin_sel_algo(item)
+            if not self.bin_sel_algo(item):
+                self.success = False
+                return
+        self.success = True

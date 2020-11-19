@@ -2,3 +2,6 @@ __pycache__/
 .mypy_cache
 # editor files
 *~
+build
+dist
+greedypacker.egg-info
